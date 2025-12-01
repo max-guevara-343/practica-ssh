@@ -1,0 +1,39 @@
+a) ¿Qué tipo de servicio es SSH?
+SSH (Secure Shell) es un protocolo de red seguro de tipo cliente-servidor que permite conectarse y administrar equipos de forma remota mediante comunicación cifrada.
+
+b) ¿De qué dos maneras podemos autenticarnos en un servidor SSH?
+1. Mediante usuario y contraseña.
+2. Mediante un par de llaves: clave pública y clave privada.
+
+c) ¿Qué es la autenticación interactiva mediante teclado?
+Es un método en el que el servidor pide al usuario que escriba información por teclado (por ejemplo una contraseña o códigos de verificación) directamente en la terminal para completar la autenticación.
+
+c) ¿Qué diferencias hay entre ellas?
+- Autenticación por contraseña:
+  • El usuario escribe una contraseña.
+  • Es fácil de usar, pero si la contraseña es débil o se filtra, el acceso es vulnerable.
+  • Es más fácil de atacar por fuerza bruta.
+
+- Autenticación por llaves (clave pública/privada):
+  • El cliente demuestra que posee la clave privada asociada a una clave pública registrada en el servidor.
+  • No se envía una contraseña por la red.
+  • Es mucho más difícil de adivinar o atacar.
+  • Se puede proteger la clave privada con una passphrase.
+
+d) ¿Cuál es mejor? ¿Por qué?
+En general es mejor la autenticación mediante llaves pública/privada porque:
+- No envía contraseñas por la red.
+- Es más segura frente a ataques de fuerza bruta.
+- Permite automatizar conexiones seguras (por ejemplo con Git).
+- Se puede combinar con passphrase para mayor seguridad.
+
+e) ¿Qué significan las siglas SSH?
+SSH significa Secure Shell.
+
+f) ¿Para qué puede ser usado SSH?
+SSH puede usarse para:
+- Administrar servidores remotos desde una terminal segura.
+- Transferir archivos de manera cifrada (SCP, SFTP).
+- Crear túneles y redirección de puertos.
+- Proteger otros servicios a través de un canal cifrado.
+- Conectarse a repositorios Git (por ejemplo GitHub) mediante autenticación SSH.
